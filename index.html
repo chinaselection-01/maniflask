@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maniflask — Drink Your Intentions Into Being</title>
+<meta name="description" content="Maniflask is the hydration bottle for the manifestation era. Your western zodiac on the bottle, your goals on a sticker, your ritual in every sip. Join the waitlist.">
+<meta property="og:title" content="Maniflask — Drink Your Intentions Into Being">
+<meta property="og:description" content="Your sign. Your goals. Your daily ritual. A manifestation water bottle for the zodiac era.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%231C1A16'/%3E%3Cpath d='M16 6l1.6 4.6L22 12l-4.4 1.5L16 18l-1.6-4.5L10 12l4.4-1.4z' fill='%23B8893B'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#FBF8F2; --paper:#F3ECE0; --ink:#23211C; --ink-soft:#3A372F;
+    --muted:#6F685C; --gold:#B8893B; --gold-d:#8A6322; --gold-l:#D8B877;
+    --line:rgba(35,33,28,.12); --line-2:rgba(35,33,28,.07);
+    --dark:#1B1915; --dark-2:#232017;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0;font-family:"Inter",-apple-system,"Segoe UI",Roboto,sans-serif;color:var(--ink);background:var(--cream);line-height:1.7;font-weight:400;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:"Playfair Display",Georgia,serif;font-weight:600;letter-spacing:.2px;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:1140px;margin:0 auto;padding:0 28px;}
+  .eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold-d);font-weight:600;margin-bottom:14px;}
+  .display{font-size:clamp(38px,5.4vw,64px);line-height:1.08;margin:0;font-weight:600;}
+  h2.title{font-size:clamp(28px,3.4vw,42px);line-height:1.14;margin:0 0 14px;}
+  .lead{font-size:17px;color:var(--muted);max-width:620px;font-weight:300;}
+  .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:999px;font-size:15px;font-weight:500;transition:.25s ease;cursor:pointer;border:1px solid transparent;}
+  .btn-primary{background:var(--ink);color:#fff;box-shadow:0 10px 28px -12px rgba(35,33,28,.6);}
+  .btn-primary:hover{background:#000;transform:translateY(-2px);}
+  .btn-ghost{border-color:var(--gold);color:var(--gold-d);}
+  .btn-ghost:hover{background:rgba(184,137,59,.08);transform:translateY(-2px);}
+
+  /* nav */
+  header{position:sticky;top:0;z-index:50;background:rgba(251,248,242,.82);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid transparent;transition:.3s;}
+  header.scrolled{border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;max-width:1140px;margin:0 auto;}
+  .logo{font-family:"Playfair Display",serif;font-weight:700;font-size:23px;letter-spacing:.5px;color:var(--ink);}
+  .logo b{color:var(--gold-d);font-weight:700;}
+  .nav-links{display:flex;align-items:center;gap:30px;}
+  .nav-links a.lnk{font-size:14px;color:var(--muted);transition:.2s;}
+  .nav-links a.lnk:hover{color:var(--ink);}
+  .nav .btn{padding:10px 22px;font-size:14px;}
+
+  /* hero */
+  .hero{position:relative;overflow:hidden;padding:78px 0 90px;}
+  .hero::before{content:"";position:absolute;top:-160px;right:-120px;width:620px;height:620px;background:radial-gradient(circle,rgba(216,184,119,.28),rgba(216,184,119,0) 62%);pointer-events:none;}
+  .hero::after{content:"";position:absolute;bottom:-200px;left:-140px;width:520px;height:520px;background:radial-gradient(circle,rgba(184,137,59,.14),rgba(184,137,59,0) 60%);pointer-events:none;}
+  .hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;position:relative;}
+  .pill{display:inline-block;background:#fff;border:1px solid var(--line);color:var(--gold-d);font-size:12.5px;letter-spacing:.04em;padding:6px 15px;border-radius:999px;margin-bottom:22px;box-shadow:0 4px 16px -10px rgba(35,33,28,.4);}
+  .hero p.sub{font-size:18px;color:var(--muted);margin:24px 0 34px;max-width:480px;font-weight:300;}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;}
+  .hero-art{position:relative;display:flex;justify-content:center;align-items:center;min-height:480px;}
+  .halo{position:absolute;width:380px;height:380px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,.9),rgba(255,255,255,0) 70%);filter:blur(2px);}
+  .float{animation:float 7s ease-in-out infinite;}
+  @keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-14px)}}
+
+  /* sections */
+  section.block{padding:96px 0;}
+  .paper{background:var(--paper);}
+  .rgrid{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:42px;}
+  .rcard{background:#fff;border:1px solid var(--line);border-radius:20px;padding:36px;transition:.3s;}
+  .rcard:hover{transform:translateY(-4px);box-shadow:0 26px 50px -28px rgba(35,33,28,.4);border-color:rgba(184,137,59,.4);}
+  .rcard .ic{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--gold-l),var(--gold));display:flex;align-items:center;justify-content:center;font-size:24px;color:#fff;margin-bottom:18px;box-shadow:0 10px 22px -12px rgba(138,99,34,.8);}
+  .rcard h3{font-size:23px;margin:0 0 10px;}
+  .rcard p{color:var(--muted);margin:0;font-size:15.5px;font-weight:300;}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px;counter-reset:s;}
+  .step{text-align:center;padding:14px 10px;}
+  .step .n{counter-increment:s;width:64px;height:64px;border-radius:50%;margin:0 auto 18px;border:1px solid var(--gold);background:#fff;color:var(--gold-d);display:flex;align-items:center;justify-content:center;font-family:"Playfair Display",serif;font-size:26px;font-weight:600;box-shadow:0 12px 26px -16px rgba(138,99,34,.6);}
+  .step .n::before{content:counter(s);}
+  .step h4{font-family:"Inter",sans-serif;font-size:18px;font-weight:600;margin:0 0 8px;}
+  .step p{color:var(--muted);font-size:15px;font-weight:300;max-width:260px;margin:0 auto;}
+
+  /* zodiac */
+  .zodiac{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:46px;}
+  .z{background:#fff;border:1px solid var(--line);border-radius:16px;padding:26px 14px;text-align:center;transition:.28s;position:relative;}
+  .z:hover{transform:translateY(-4px);border-color:var(--gold);box-shadow:0 22px 44px -26px rgba(35,33,28,.45);}
+  .z.top{border-color:rgba(184,137,59,.55);background:linear-gradient(180deg,#fff,#FCF6EB);}
+  .z .badge{position:absolute;top:10px;right:10px;font-size:9.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold-d);background:rgba(184,137,59,.12);padding:2px 8px;border-radius:999px;}
+  .z .sym{font-size:30px;color:var(--gold-d);line-height:1;margin-bottom:8px;}
+  .z .nm{font-size:15px;font-weight:600;font-family:"Playfair Display",serif;font-size:17px;}
+  .z .pw{font-size:12.5px;color:var(--muted);font-style:italic;margin-top:3px;}
+
+  /* dark band */
+  .dark{background:var(--dark);color:#EDE6DA;position:relative;overflow:hidden;}
+  .dark::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 70% 20%,rgba(184,137,59,.18),transparent 55%);}
+  .dark .eyebrow{color:var(--gold-l);}
+  .dark .quote{font-family:"Playfair Display",serif;font-style:italic;font-size:clamp(26px,3.2vw,40px);line-height:1.32;max-width:840px;margin:0 auto;text-align:center;position:relative;}
+  .dark .quote b{color:var(--gold-l);font-style:normal;font-weight:500;}
+  .dark .sig{text-align:center;margin-top:30px;color:#9C9486;font-size:14px;letter-spacing:.04em;position:relative;}
+
+  /* waitlist */
+  .wl{background:linear-gradient(135deg,#fff,#FBF3E4);border:1px solid rgba(184,137,59,.35);border-radius:26px;padding:60px 48px;text-align:center;box-shadow:0 30px 60px -36px rgba(138,99,34,.5);}
+  .wl h2{margin-bottom:10px;}
+  .wl p{color:var(--muted);margin:0 0 28px;font-weight:300;}
+  .form{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;max-width:520px;margin:0 auto;}
+  .form input{padding:15px 20px;border:1px solid var(--line);border-radius:999px;width:300px;font-size:15px;outline:none;font-family:inherit;background:#fff;transition:.2s;}
+  .form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,59,.14);}
+  .form button{background:var(--ink);color:#fff;border:none;padding:15px 30px;border-radius:999px;font-size:15px;font-weight:500;cursor:pointer;font-family:inherit;transition:.25s;}
+  .form button:hover{background:#000;transform:translateY(-2px);}
+  .note{font-size:12.5px;color:var(--muted);margin-top:16px;font-weight:300;}
+
+  /* community */
+  .form-b{display:flex;flex-direction:column;gap:13px;max-width:460px;}
+  .form-b input,.form-b select,.form-b textarea{padding:14px 17px;border:1px solid var(--line);border-radius:14px;font-size:15px;font-family:inherit;background:#fff;outline:none;color:var(--ink);}
+  .form-b input:focus,.form-b select:focus,.form-b textarea:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(184,137,59,.14);}
+  .form-b button{align-self:flex-start;background:var(--ink);color:#fff;border:none;padding:14px 30px;border-radius:999px;font-size:15px;font-weight:500;cursor:pointer;font-family:inherit;transition:.25s;}
+  .form-b button:hover{background:#000;transform:translateY(-2px);}
+  .wall{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:38px;}
+  .post{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;transition:.28s;}
+  .post:hover{transform:translateY(-4px);box-shadow:0 24px 46px -28px rgba(35,33,28,.4);}
+  .post .head{display:flex;align-items:center;gap:12px;margin-bottom:14px;}
+  .post .av{width:42px;height:42px;border-radius:50%;background:linear-gradient(135deg,var(--gold-l),var(--gold));color:#fff;display:flex;align-items:center;justify-content:center;font-weight:600;}
+  .post .ph{width:100%;height:150px;border-radius:12px;background:linear-gradient(135deg,#F3ECE0,#E9DFCC);display:flex;align-items:center;justify-content:center;color:#A99F8C;font-size:13px;margin-bottom:14px;}
+  .post .who{font-weight:600;font-size:15px;}
+  .post .meta{font-size:12.5px;color:var(--gold-d);font-style:italic;}
+  .post p{font-size:14.5px;color:var(--muted);font-weight:300;margin:0;line-height:1.6;}
+
+  footer{border-top:1px solid var(--line);padding:46px 28px 40px;text-align:center;color:var(--muted);font-size:13.5px;}
+  footer .logo{font-size:20px;margin-bottom:12px;display:inline-block;}
+  footer .flinks{margin-top:14px;display:flex;gap:22px;justify-content:center;flex-wrap:wrap;}
+  footer .flinks a{color:var(--muted);font-size:13px;transition:.2s;}
+  footer .flinks a:hover{color:var(--gold-d);}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
+  .reveal.d1{transition-delay:.1s;} .reveal.d2{transition-delay:.2s;} .reveal.d3{transition-delay:.3s;}
+
+  @media(max-width:900px){
+    .hero-grid{grid-template-columns:1fr;text-align:center;}
+    .hero p.sub{margin-left:auto;margin-right:auto;}
+    .hero-cta{justify-content:center;}
+    .hero-art{order:-1;min-height:380px;}
+    .rgrid,.steps,.wall{grid-template-columns:1fr;}
+    .zodiac{grid-template-columns:repeat(2,1fr);}
+    .nav-links a.lnk{display:none;}
+  }
+</style>
+</head>
+<body>
+
+<header id="hdr">
+  <div class="nav">
+    <div class="logo">Manif<b>lask</b></div>
+    <nav class="nav-links">
+      <a class="lnk" href="#ritual">The Ritual</a>
+      <a class="lnk" href="#zodiac">Zodiac</a>
+      <a class="lnk" href="#story">Story</a>
+      <a class="btn btn-primary" href="#join">Join Waitlist</a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap">
+    <div class="hero-grid">
+      <div class="hero-txt">
+        <span class="pill">✦ Launching 2027 · First-drop members get free shipping</span>
+        <h1 class="display">Drink your<br>intentions<br>into being.</h1>
+        <p class="sub">Maniflask is the hydration bottle for the manifestation era — your western zodiac on the glass, your goals on a sticker, your ritual in every sip.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#join">Join the waitlist</a>
+          <a class="btn btn-ghost" href="#ritual">See the ritual</a>
+        </div>
+      </div>
+      <div class="hero-art">
+        <div class="halo"></div>
+        <svg class="float" viewBox="0 0 240 470" width="250" xmlns="http://www.w3.org/2000/svg" aria-label="Maniflask bottle">
+          <defs>
+            <linearGradient id="glass" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#FFFFFF"/><stop offset=".5" stop-color="#EAF3FB"/><stop offset="1" stop-color="#D6E9F6"/>
+            </linearGradient>
+            <linearGradient id="cap" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#34302A"/><stop offset="1" stop-color="#1B1915"/>
+            </linearGradient>
+          </defs>
+          <rect x="92" y="6" width="56" height="30" rx="9" fill="url(#cap)"/>
+          <rect x="100" y="34" width="40" height="14" fill="#5F5E5A"/>
+          <rect x="64" y="48" width="112" height="404" rx="30" fill="url(#glass)" stroke="#9FCBEA" stroke-width="1.5"/>
+          <rect x="64" y="48" width="34" height="404" rx="30" fill="#ffffff" opacity=".35"/>
+          <g stroke="#B8893B" stroke-width="1.2" opacity=".85">
+            <line x1="92" y1="104" x2="124" y2="118"/><line x1="124" y1="118" x2="112" y2="150"/>
+            <line x1="112" y1="150" x2="146" y2="158"/><line x1="146" y1="158" x2="132" y2="190"/>
+          </g>
+          <g fill="#B8893B">
+            <circle cx="92" cy="104" r="3"/><circle cx="124" cy="118" r="3"/><circle cx="112" cy="150" r="3"/>
+            <circle cx="146" cy="158" r="3"/><circle cx="132" cy="190" r="3"/>
+          </g>
+          <text x="120" y="232" text-anchor="middle" font-family="Playfair Display,Georgia,serif" font-size="15" fill="#23211C" font-weight="700">AQUARIUS</text>
+          <text x="120" y="250" text-anchor="middle" font-size="11" fill="#6F685C" font-style="italic">I envision</text>
+          <rect x="82" y="284" width="76" height="104" rx="10" fill="#FFFFFF" stroke="#C9BFA8" stroke-width="1.2" stroke-dasharray="5 4"/>
+          <text x="120" y="316" text-anchor="middle" font-size="10" fill="#444441" font-weight="600" letter-spacing="1.5">I AM</text>
+          <text x="120" y="334" text-anchor="middle" font-size="10" fill="#444441" letter-spacing="1.5">WORTHY OF</text>
+          <text x="120" y="352" text-anchor="middle" font-size="10" fill="#444441" letter-spacing="1.5">ABUNDANCE</text>
+          <text x="120" y="374" text-anchor="middle" font-size="7.5" fill="#B4B2A9" font-style="italic">— my daily intention —</text>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RITUAL -->
+<section class="block" id="ritual">
+  <div class="wrap reveal">
+    <div class="eyebrow">The Ritual</div>
+    <h2 class="title">Two layers of meaning —<br>identity and intention.</h2>
+    <p class="lead">Most bottles sell function. Maniflask sells a feeling you return to every single day. It works on two quiet layers of meaning.</p>
+    <div class="rgrid">
+      <div class="rcard reveal d1">
+        <div class="ic">✶</div>
+        <h3>Your sign</h3>
+        <p>Each bottle carries your western zodiac — constellation line art, sign name, and a one-word power word. It says who you are before you say a word.</p>
+      </div>
+      <div class="rcard reveal d2">
+        <div class="ic">✎</div>
+        <h3>Your goals</h3>
+        <p>Every Maniflask ships with a sheet of writable intention labels. Write it, stick it to the intention zone, sip it into reality — daily, out loud, on purpose.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STEPS -->
+<section class="block paper">
+  <div class="wrap reveal">
+    <div class="eyebrow">How it works</div>
+    <h2 class="title">Three steps, one ritual.</h2>
+    <div class="steps">
+      <div class="step reveal d1"><div class="n"></div><h4>Write</h4><p>Put your intention on a label — “I am worthy of abundance.”</p></div>
+      <div class="step reveal d2"><div class="n"></div><h4>Stick</h4><p>Place it on your bottle’s intention zone. Repositionable, no residue.</p></div>
+      <div class="step reveal d3"><div class="n"></div><h4>Sip</h4><p>Drink daily and speak it into being. Hydration becomes manifestation.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ZODIAC -->
+<section class="block" id="zodiac">
+  <div class="wrap reveal">
+    <div class="eyebrow">12 Signs</div>
+    <h2 class="title">Find your sign. Find your word.</h2>
+    <p class="lead">Twelve bottles, one for every western zodiac sign. Launching first with four best-sellers: Scorpio, Pisces, Leo, Aquarius.</p>
+    <div class="zodiac">
+      <div class="z"><div class="sym">♈</div><div class="nm">Aries</div><div class="pw">I lead</div></div>
+      <div class="z"><div class="sym">♉</div><div class="nm">Taurus</div><div class="pw">I build</div></div>
+      <div class="z"><div class="sym">♊</div><div class="nm">Gemini</div><div class="pw">I connect</div></div>
+      <div class="z"><div class="sym">♋</div><div class="nm">Cancer</div><div class="pw">I nurture</div></div>
+      <div class="z top"><div class="badge">Best-seller</div><div class="sym">♌</div><div class="nm">Leo</div><div class="pw">I shine</div></div>
+      <div class="z"><div class="sym">♍</div><div class="nm">Virgo</div><div class="pw">I refine</div></div>
+      <div class="z"><div class="sym">♎</div><div class="nm">Libra</div><div class="pw">I balance</div></div>
+      <div class="z top"><div class="badge">Best-seller</div><div class="sym">♏</div><div class="nm">Scorpio</div><div class="pw">I transform</div></div>
+      <div class="z"><div class="sym">♐</div><div class="nm">Sagittarius</div><div class="pw">I expand</div></div>
+      <div class="z"><div class="sym">♑</div><div class="nm">Capricorn</div><div class="pw">I achieve</div></div>
+      <div class="z top"><div class="badge">Best-seller</div><div class="sym">♒</div><div class="nm">Aquarius</div><div class="pw">I envision</div></div>
+      <div class="z top"><div class="badge">Best-seller</div><div class="sym">♓</div><div class="nm">Pisces</div><div class="pw">I dream</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DARK QUOTE -->
+<section class="block dark" id="story">
+  <div class="wrap">
+    <div class="eyebrow reveal">Our belief</div>
+    <p class="quote reveal d1">We drink water every day without thinking. Maniflask turns that small, certain habit into a <b>moment of intention</b> — a quiet daily reminder of what you’re calling in.</p>
+    <div class="sig reveal d2">— A China Selection brand, built for the manifestation generation</div>
+  </div>
+</section>
+
+<!-- WAITLIST -->
+<section class="block" id="join">
+  <div class="wrap">
+    <div class="wl reveal">
+      <div class="eyebrow">Join the waitlist</div>
+      <h2 class="title">Be first through the door.</h2>
+      <p>First-drop members get early access and free shipping. No spam — just launch news.</p>
+      <form class="form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+        <input type="email" name="email" placeholder="you@email.com" aria-label="Email" required>
+        <button type="submit">Notify me</button>
+      </form>
+      <p class="note">如需收邮箱：把表单 action 里的 <b>YOUR_FORM_ID</b> 换成你在 formspree.io 注册的免费表单 ID，提交的邮箱直接进你收件箱。</p>
+    </div>
+
+    <div id="community" style="margin-top:96px;">
+      <div class="eyebrow">Community</div>
+      <h2 class="title">The Manifestations Wall</h2>
+      <p class="lead">Every Maniflask ships with a member code. Claim it, then share your bottle and your story. We feature real manifestations from the community — that’s how a bottle becomes a movement.</p>
+
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:40px;margin-top:42px;align-items:start;">
+        <div class="wl reveal" style="text-align:left;padding:40px 36px;">
+          <h2 class="title" style="font-size:26px;margin-bottom:8px;">Share your manifestation</h2>
+          <p style="color:var(--muted);margin:0 0 22px;font-weight:300;">Got your member code? Send us your photo + story. (Photo link or tag #maniflask — full upload arrives with member accounts.)</p>
+          <form class="form-b" action="https://formspree.io/f/YOUR_COMMUNITY_FORM_ID" method="POST">
+            <input type="text" name="handle" placeholder="Handle / name" aria-label="Handle" required>
+            <select name="zodiac" aria-label="Zodiac">
+              <option value="">Your sign</option>
+              <option>Aries</option><option>Taurus</option><option>Gemini</option><option>Cancer</option>
+              <option>Leo</option><option>Virgo</option><option>Libra</option><option>Scorpio</option>
+              <option>Sagittarius</option><option>Capricorn</option><option>Aquarius</option><option>Pisces</option>
+            </select>
+            <input type="url" name="photo" placeholder="Photo link (or tag #maniflask)" aria-label="Photo link">
+            <textarea name="story" placeholder="What are you manifesting?" rows="3" aria-label="Story" required></textarea>
+            <button type="submit">Submit</button>
+          </form>
+          <p class="note">投稿进 Formspree（替换 YOUR_COMMUNITY_FORM_ID），我们审核后精选展示在本墙上。</p>
+        </div>
+
+        <div class="wall" style="margin-top:0;">
+          <div class="post reveal d1">
+            <div class="ph">your photo here</div>
+            <div class="head"><div class="av">L</div><div><div class="who">@luna.manifests</div><div class="meta">Aquarius · I envision</div></div></div>
+            <p>“Wrote ‘I attract calm’ on my label. Three weeks of sipping + journaling and I finally quit the job that drained me.”</p>
+          </div>
+          <div class="post reveal d2">
+            <div class="ph">your photo here</div>
+            <div class="head"><div class="av">M</div><div><div class="who">@manifest.maya</div><div class="meta">Leo · I shine</div></div></div>
+            <p>“My Leo bottle sits on my desk. Every coffee is a reminder I’m building the business I prayed for.”</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="logo">Manif<b>lask</b></div>
+  <div>© 2026 Maniflask — A China Selection brand.</div>
+  <div class="flinks">
+    <a href="#">Instagram</a><a href="#">TikTok</a><a href="#">Privacy</a><a href="#">Contact</a>
+  </div>
+</footer>
+
+<script>
+  // sticky nav border
+  var hdr=document.getElementById('hdr');
+  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>20);});
+  // reveal on scroll
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(function(el){io.observe(el);});
+</script>
+</body>
+</html>
